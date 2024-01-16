@@ -54,7 +54,7 @@ ScrollReveal({
 
 /*==================== typed js ====================*/
 const typed = new Typed('.multiple-text',{
-    strings: ['Frontend Developer', 'Wordpress Developer', 'Framer Web-developer', 'Content Writer'],
+    strings: ['Frontend Developer', 'Wordpress Developer', 'Framer Web-developer', 'Other CMS developer'],
     typeSpeed: 100,
     backSpeed: 100,
     backDelay: 1000,
