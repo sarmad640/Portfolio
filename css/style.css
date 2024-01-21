@@ -253,8 +253,21 @@ span{
     /* align-items: center; */
     gap: 2.5rem;
 }
+.certificate-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    gap: 2.5rem;
+}
 
 .portfolio-container .portfolio-box {
+    position: relative;
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem var(--bg-color);
+    overflow: hidden;
+    display: flex;
+}
+.certificate-container .portfolio-box {
     position: relative;
     border-radius: 2rem;
     box-shadow: 0 0 1rem var(--bg-color);
@@ -269,7 +282,7 @@ span{
 }
  
 .fit {
-    height: fit-content;
+    height: 247.44px;
 }
 
 /* #project1 {
@@ -454,6 +467,10 @@ span{
 
     .portfolio-container {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .fit {
+        height: fit-content;
     }
 } 
 
