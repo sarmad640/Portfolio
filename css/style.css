@@ -114,6 +114,8 @@ section {
 }
 
 
+
+
 span{
     color: var(--main-color);
 }
@@ -166,12 +168,53 @@ span{
     box-shadow: none;
 }
 
+@keyframes slide {
+    from{
+transform: translateX(0);
+    }to{
+transform: translateX(-100%);
+
+    }
+}
+
+/* .ico{
+    background: var(--second-bg-color);
+   max-height: fit-content;
+   margin: 0;
+   padding: 0;
+} */
+
+.icos{
+    background: var(--second-bg-color);
+    max-height: fit-content;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    padding: 50px 0 0 0 ;
+    white-space: nowrap;
+
+}
+
+.ico-slide{
+    white-space: nowrap;
+
+    display: inline-block;
+    animation: slide 25s infinite linear;
+}
+
+.ico-slide img{
+    height: 18vh;
+    margin: 0 25px;
+}
+
+
 .about {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 2rem;
     background: var(--second-bg-color);
+    padding-top: 10px;
 }
 
 .about-img img {
@@ -238,6 +281,39 @@ span{
     font-size: 1.6rem;
     margin: 1rem 0 3rem;
 }
+
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .5s ease;
+
+  }
+
+  .swiper-slide:hover img {
+    transform: scale(1.1);
+ }
+
+  .swiper {
+    margin-left: auto;
+    margin-right: auto;
+  }
 
 .portfolio, .certificates {
     background: var(--second-bg-color);
@@ -311,8 +387,27 @@ span{
     transform: translateY(100%);
     transition: .5s ease;
 }
+.swiper-slide .portfolio-layer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 103%;
+    height: 100%;
+    background: linear-gradient(rgba(0,0,0, .1), var(--main-color));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 4rem;
+    transform: translateY(100%);
+    transition: .5s ease;
+}
 
 .portfolio-box:hover .portfolio-layer {
+    transform: translateY(0);
+}
+.swiper-slide:hover .portfolio-layer {
     transform: translateY(0);
 }
 
@@ -446,6 +541,11 @@ span{
     .home-img img {
         width: 70vw;
         margin-top: 4rem;
+    }
+
+    .ico-slide img{
+        height: 8vh;
+        margin: 0 25px;
     }
 
     .about {
